@@ -1,0 +1,57 @@
+#include <iostream>
+using namespace std;
+
+// Function to add two numbers
+double add(double a, double b) {
+    return a + b;
+}
+
+// Function to subtract two numbers
+double subtract(double a, double b) {
+    return a - b;
+}
+
+// Function to multiply two numbers
+double multiply(double a, double b) {
+    return a * b;
+}
+
+// Function to divide two numbers
+double divide(double a, double b) {
+    if (b != 0)
+        return a / b;
+    else {
+        cout << "Error: Division by zero!" << endl;
+        return 0; // Return 0 if division by zero occurs
+    }
+}
+
+int main() {
+    double num1, num2;
+    char op;
+
+    cout << "Enter two numbers: ";
+    cin >> num1 >> num2;
+
+    cout << "Choose an operation (+, -, *, /): ";
+    cin >> op;
+
+    switch(op) {
+        case '+':
+            cout << "Result: " << add(num1, num2) << endl;
+            break;
+        case '-':
+            cout << "Result: " << subtract(num1, num2) << endl;
+            break;
+        case '*':
+            cout << "Result: " << multiply(num1, num2) << endl;
+            break;
+        case '/':
+            cout << "Result: " << divide(num1, num2) << endl;
+            break;
+        default:
+            cout << "Invalid operation!" << endl;
+    }
+
+    return 0;
+}
