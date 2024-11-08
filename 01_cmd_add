@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h> // For atoi function
+
+int main(int argc, char *argv[]) {
+    // Check if the correct number of arguments are provided
+    if (argc != 3) {
+        printf("Usage: %s <number1> <number2>\n", argv[0]);
+        return 1; // Exit with an error code
+    }
+
+    // Convert command-line arguments from strings to integers
+    int num1 = atoi(argv[1]);
+    int num2 = atoi(argv[2]);
+
+    // Calculate the sum
+    int sum = num1 + num2;
+
+    // Print the result
+    printf("The sum of %d and %d is: %d\n", num1, num2, sum);
+
+    return 0; // Success
+}
